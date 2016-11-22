@@ -4,6 +4,7 @@ const fonoapi = require('fonoapi-nodejs')
 const app= express()
 const _ = require("underscore")
 fonoapi.token= '7a5c8479953d1b4dca58d0465f14224a1d639cc38a1ee3dc';
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -43,7 +44,7 @@ app.get('/search', (req,res) => {
 	fonoapi.getDevices(printNames,name);
 })
 
-app.listen(3000, () => console.log("Listen on PORT 3000..."))
+app.listen(PORT, () => console.log("Listen on PORT 3000..."))
 
 
 
