@@ -42,33 +42,37 @@ angular.module("myApp")
 })
 .controller('controllerAdd', function($scope,phoneService){
 
-	$scope.Myobject = {}
+	/*$scope.createObject = function(){
+		$scope.myObject = {};
 
-	Myobject.deviceName = $scope.deviceName;
-	Myobject.brand = $scope.brand;
-	Myobject.img = $scope.img;
-	Myobject.dimensions = $scope.dimensions;
-	Myobject.size = $scope.size;
-	Myobject.sim = $scope.sim;
-	Myobject.scrrenType = $scope.scrrenType;
-	Myobject.resolution = $scope.resolution;
-	Myobject.card_slot = $scope.card_slot;
-	Myobject.wlan = $scope.wlan;
-	Myobject.blutooth = $scope.blutooth;
-	Myobject.gps = $scope.gps;
-	Myobject.radio = $scope.radio;
-	Myobject.usb = $scope.usb;
-	Myobject.batery = $scope.batery;
-	Myobject.colors= $scope.colors
-	Myobject.sensors = $scope.sensors;
-	Myobject.memory = $scope.memory;
-	Myobject.os = $scope.os;
-	Myobject.cam = $scope.cam;
-	Myobject.c_secondary = $scope.c_secondary;
-	Myobject.c_primary = $scope.c_primary;
-	Myobject.video = $scope.video;
-	Myobject.chipset = $scope.chipset;
-	Myobject.conections = $scope.conections;
+		$scope.myobject.deviceName = $scope.deviceName;
+		$scope.myobject.brand = $scope.brand;
+		$scope.myobject.img = $scope.img;
+		$scope.myobject.dimensions = $scope.dimensions;
+		$scope.myobject.size = $scope.size;
+		$scope.myobject.sim = $scope.sim;
+		$scope.myobject.scrrenType = $scope.scrrenType;
+		$scope.myobject.resolution = $scope.resolution;
+		$scope.myobject.card_slot = $scope.card_slot;
+		$scope.myobject.wlan = $scope.wlan;
+		$scope.myobject.blutooth = $scope.blutooth;
+		$scope.myobject.gps = $scope.gps;
+		$scope.myobject.radio = $scope.radio;
+		$scope.myobject.usb = $scope.usb;
+		$scope.myobject.batery = $scope.batery;
+		$scope.myobject.colors= $scope.colors
+		$scope.myobject.sensors = $scope.sensors;
+		$scope.myobject.memory = $scope.memory;
+		$scope.myobject.os = $scope.os;
+		$scope.myobject.cam = $scope.cam;
+		$scope.myobject.c_secondary = $scope.c_secondary;
+		$scope.myobject.c_primary = $scope.c_primary;
+		$scope.myobject.video = $scope.video;
+		$scope.myobject.chipset = $scope.chipset;
+		$scope.myobject.conections = $scope.conections;
+
+		console.log($scope.myObject)
+	}*/
 
 
 })

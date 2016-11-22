@@ -1,131 +1,131 @@
 <div class="container">
 	
-	<form class="myform" action="" method="POST" role="form">
+	<form class="myform" ng-submit="createObject()" action="/add" method="POST" role="form">
 		<legend>Agrega</legend>
 
 		<div class="form-group col-md-6">
 			<label for="">Nombre</label>
-			<input ng-model="deviceName" class="form-control" id="" placeholder="iphone 7....">
+			<input required name="deviceName" class="form-control" id="" placeholder="iphone 7....">
 		</div>
-		<p>{{deviceName}}</p>
+
 		<div class="form-group col-md-6">
 			<label for="">Marca</label>
-			<input type="text" ng-model="brand" class="form-control" id="" placeholder="Apple...">
+			<input required type="text" name="brand" class="form-control" id="" placeholder="Apple...">
 		</div>
 
 		<div class="form-group col-md-12">
-			<label for="">imagen!</label>
-			<input required type="text" ng-model="img" class="form-control" id="" placeholder="URL de la imagen.. ">
+			<label for="">imagen</label>
+			<input required type="URL" name="img" class="form-control" id="" placeholder="URL de la imagen.. ">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Dimenciones</label>
-			<input type="text" ng-model="dimensions" class="form-control" id="" placeholder="7x5x2...">
+			<input required type="text" name="dimensions" class="form-control" id="" placeholder="7x5x2...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Tamaño(pulgadas)</label>
-			<input type="text" ng-model="size" class="form-control" id="" placeholder="5.5''..">
+			<input required type="text" name="size" class="form-control" id="" placeholder="5.5''..">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Sim</label>
-			<input type="text" ng-model="sim" class="form-control" id="" placeholder="nano micro...">
+			<input required type="text" name="sim" class="form-control" id="" placeholder="nano micro...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">tipo de pantalla</label>
-			<input type="text" ng-model="screenType" class="form-control" id="" placeholder="lecd..">
+			<input required type="text" name="screenType" class="form-control" id="" placeholder="lecd..">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">resolucion</label>
-			<input type="text" ng-model="resolution" class="form-control" id="" placeholder="1080x720....">
+			<input required type="text" name="resolution" class="form-control" id="" placeholder="1080x720....">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Lector de targetas</label>
-			<input type="text" ng-model="card_slot" class="form-control" id="" placeholder="no/si">
+			<input required type="text" name="card_slot" class="form-control" id="" placeholder="no/si">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Wlan</label>
-			<input type="text" ng-model="wlan" class="form-control" id="" placeholder="wifi 1.8..">
+			<input required type="text" name="wlan" class="form-control" id="" placeholder="wifi 1.8..">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Bluetooth</label>
-			<input type="text" ng-model="bluetooth" class="form-control" id="" placeholder="2.565464....">
+			<input required type="text" name="bluetooth" class="form-control" id="" placeholder="2.565464....">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">gps</label>
-			<input type="text" ng-model="gps" class="form-control" id="" placeholder="si gps, agps...">
+			<input required type="text" name="gps" class="form-control" id="" placeholder="si gps, agps...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">radio</label>
-			<input type="text" ng-model="radio" class="form-control" id="" placeholder="si/no">
+			<input required type="text" name="radio" class="form-control" id="" placeholder="si/no">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">usb</label>
-			<input type="text" ng-model="usb" class="form-control" id="" placeholder="tipo de conector...">
+			<input required type="text" name="usb" class="form-control" id="" placeholder="tipo de conector...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Bateria</label>
-			<input type="text" ng-model="batery" class="form-control" id="" placeholder="litio no renobable 1300h...">
+			<input required type="text" name="batery" class="form-control" id="" placeholder="litio no renobable 1300h...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">colores</label>
-			<input type="text" ng-model="colors" class="form-control" id="" placeholder="negro gris rojo..">
+			<input required type="text" name="colors" class="form-control" id="" placeholder="negro gris rojo..">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">sensores</label>
-			<input type="text" ng-model="sensors" class="form-control" id="" placeholder="de proximidad de huellas...">
+			<input required type="text" name="sensors" class="form-control" id="" placeholder="de proximidad de huellas...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Memoria (interna y Ram)</label>
-			<input type="text" ng-model="memory" class="form-control" id="" placeholder="32/64/120GB , 4Gb RAM">
+			<input required type="text" name="memory" class="form-control" id="" placeholder="32/64/120GB , 4Gb RAM">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Sistema Operativo</label>
-			<input type="text" ng-model="os" class="form-control" id="" placeholder="IOS 10">
+			<input required type="text" name="os" class="form-control" id="" placeholder="IOS 10">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Camara</label>
-			<input type="text" ng-model="cam" class="form-control" id="" placeholder="obertura de camara, zoom y esas mierdas wey">
+			<input required type="text" name="cam" class="form-control" id="" placeholder="obertura de camara, zoom y esas mierdas wey">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Camara (trasera/primaria)</label>
-			<input type="text" ng-model="c_primary" class="form-control" id="" placeholder="12mpx">
+			<input required type="text" name="c_primary" class="form-control" id="" placeholder="12mpx">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Camara (frontal)</label>
-			<input type="text" ng-model="c_secondary" class="form-control" id="" placeholder="8Mpx">
+			<input required type="text" name="c_secondary" class="form-control" id="" placeholder="8Mpx">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Video</label>
-			<input type="text" ng-model="video" class="form-control" id="" placeholder="480p@24fps ....">
+			<input required type="text" name="video" class="form-control" id="" placeholder="480p@24fps ....">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">procesador (chip)</label>
-			<input type="text" ng-model="chipset" class="form-control" id="" placeholder="Qualcom intel o el de apple A10...">
+			<input required type="text" name="chipset" class="form-control" id="" placeholder="Qualcom intel o el de apple A10...">
 		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Conecciones</label>
-			<input type="text" ng-model="conections" class="form-control" id="" placeholder="tipo de conecciones 3g 4g hdp..y esas pinches mamadas">
+			<input required type="text" name="conections" class="form-control" id="" placeholder="tipo de conecciones 3g 4g hdp..y esas pinches mamadas">
 		</div>
 
 
