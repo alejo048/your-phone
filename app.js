@@ -15,7 +15,7 @@ app.use( bodyparser.urlencoded({ extended: false }) )
 app.get('/data', (req,res) => {
 
 	var printNames = (queryString,data) => {
-		let brands = data.map((item)=> {
+		var brands = data.map((item)=> {
 			newItem =[]
 			newItem = item.Brand;
 			return newItem
