@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Compare</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- fonts GOOGLE!!!-->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,400i,600,600i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<!-- Latest compiled and minified CSS & JS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" data-toggle="collapse" data-target="#nav" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button>
+			</div><a href="#/" class="navbar-brand">LOGO</a>
+			<div id="nav" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="#/">Home</a></li>
+					<li><a href="#/compare">Compare</a></li>
+					<li><a href="#/fav">Favs</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right SandS">
+					<li>
+						<form action="/search" method="POST" class="form-group search"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+							<input autofocus name="phone" type="text" placeholder="Search..." class="searchName">
+						</form>
+					</li>
+					<li>
+						<button class="login"> <span aria-hidden="true" class="glyphicon glyphicon-off"></span></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="main">
+		
+		<div class="aside">
+			
+		</div>
+
+		<div>
+			
+			<ng-view></ng-view>
+
+		</div>
+
+	</div>
+
+	<div class="footer"></div>
+
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+</body>
+</html>

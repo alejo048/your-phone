@@ -1,0 +1,42 @@
+	<div class="filter">
+		<h4>Brands</h4>
+		<ul>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Apple")'> Apple
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Google")'> Google
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Samsung")'> Samsung
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Nokia")'> Nokia
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Huawei")'> Huawei
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Asus")'> Asus
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("LG")'> LG
+			</li>
+			<li>
+				<input type="checkbox" ng-click='includeBrand("Sony")'> Sony
+			</li>
+		</ul>
+
+		<p> brands includes {{brandsIncludes}}</p>
+	</div>
+
+	<div class="content">
+
+		<div class="item" ng-repeat="phone in phones | filter:brandFilter " data-id="phone.id">
+			<img src="" alt="" style="height: 70%">
+			<h4 class="name">{{phone.DeviceName}}</h4>
+			<button class="compare">Compare</button>	
+			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
+		</div>
+
+	</div>
