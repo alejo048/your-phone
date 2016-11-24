@@ -47,7 +47,7 @@ app.get('/search', (req,res) => {
 
 
 
-/*MongoClient.connect(url, (err,db)=>{
+MongoClient.connect(url, (err,db)=>{
 	if (err) throw("There werw problems connecting to the DB server...")
 
 
@@ -114,7 +114,7 @@ app.get('/search', (req,res) => {
 
 
 		})
-})*/
+})
 
 
 app.listen(PORT, () => console.log("Listen on PORT 3000..."))
