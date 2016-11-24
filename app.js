@@ -33,85 +33,88 @@ app.get('/data', (req,res) => {
 	fonoapi.getLatest(printNames,100);
 })
 
+
 app.get('/search', (req,res) => {
 
 	var name = req.query.name;
 
 	var printNames = (queryString,data) => {
-
 		res.json(data)
 	}
-	
+
 	fonoapi.getDevices(printNames,name);
 })
 
-MongoClient.connect(url, (err,db)=>{
+
+
+/*MongoClient.connect(url, (err,db)=>{
 	if (err) throw("There werw problems connecting to the DB server...")
 
-	app.post('/add', (req,res) =>{
 
-		var deviceName = req.body.deviceName;
-		var brand = req.body.brand;
-		var img = req.body.img;
-		var dimensions = req.body.dimensions;
-		var size = req.body.size;
-		var sim = req.body.sim;
-		var screenType = req.body.screenType;
-		var resolution = req.body.resolution;
-		var card_slot = req.body.card_slot;
-		var wlan = req.body.wlan;
-		var bluetooth = req.body.bluetooth;
-		var gps = req.body.gps;
-		var radio = req.body.radio;
-		var usb = req.body.usb;
-		var batery = req.body.batery;
-		var colors= req.body.colors
-		var sensors = req.body.sensors;
-		var memory = req.body.memory;
-		var os = req.body.os;
-		var cam = req.body.cam;
-		var c_secondary = req.body.c_secondary;
-		var c_primary = req.body.c_primary;
-		var video = req.body.video;
-		var chipset = req.body.chipset;
-		var conections = req.body.conections;
+		app.post('/add', (req,res) =>{
 
-		var myObject = {};
+			var deviceName = req.body.deviceName;
+			var brand = req.body.brand;
+			var img = req.body.img;
+			var dimensions = req.body.dimensions;
+			var size = req.body.size;
+			var sim = req.body.sim;
+			var screenType = req.body.screenType;
+			var resolution = req.body.resolution;
+			var card_slot = req.body.card_slot;
+			var wlan = req.body.wlan;
+			var bluetooth = req.body.bluetooth;
+			var gps = req.body.gps;
+			var radio = req.body.radio;
+			var usb = req.body.usb;
+			var batery = req.body.batery;
+			var colors= req.body.colors
+			var sensors = req.body.sensors;
+			var memory = req.body.memory;
+			var os = req.body.os;
+			var cam = req.body.cam;
+			var c_secondary = req.body.c_secondary;
+			var c_primary = req.body.c_primary;
+			var video = req.body.video;
+			var chipset = req.body.chipset;
+			var conections = req.body.conections;
 
-		myObject.deviceName = deviceName;
-		myObject.brand = brand;
-		myObject.img = img;
-		myObject.dimensions = dimensions;
-		myObject.size = size;
-		myObject.sim = sim;
-		myObject.screenType = screenType;
-		myObject.resolution = resolution;
-		myObject.card_slot = card_slot;
-		myObject.wlan = wlan;
-		myObject.bluetooth = bluetooth;
-		myObject.gps = gps;
-		myObject.radio = radio;
-		myObject.usb = usb;
-		myObject.batery = batery;
-		myObject.colors= colors
-		myObject.sensors = sensors;
-		myObject.memory = memory;
-		myObject.os = os;
-		myObject.cam = cam;
-		myObject.c_secondary = c_secondary;
-		myObject.c_primary = c_primary;
-		myObject.video = video;
-		myObject.chipset = chipset;
-		myObject.conections = conections;
+			var myObject = {};
 
-		db.collection('phones')
+			myObject.deviceName = deviceName;
+			myObject.brand = brand;
+			myObject.img = img;
+			myObject.dimensions = dimensions;
+			myObject.size = size;
+			myObject.sim = sim;
+			myObject.screenType = screenType;
+			myObject.resolution = resolution;
+			myObject.card_slot = card_slot;
+			myObject.wlan = wlan;
+			myObject.bluetooth = bluetooth;
+			myObject.gps = gps;
+			myObject.radio = radio;
+			myObject.usb = usb;
+			myObject.batery = batery;
+			myObject.colors= colors
+			myObject.sensors = sensors;
+			myObject.memory = memory;
+			myObject.os = os;
+			myObject.cam = cam;
+			myObject.c_secondary = c_secondary;
+			myObject.c_primary = c_primary;
+			myObject.video = video;
+			myObject.chipset = chipset;
+			myObject.conections = conections;
+
+			db.collection('phones')
 			.insert(myObject)
 			.then(console.log("VERYYYYY GOOODDD!!!!!!!!!!!!!!!!!!!!!"))
 			.then(res.redirect('/#/add'))
 
 
-	})
-})
+		})
+})*/
 
 
 app.listen(PORT, () => console.log("Listen on PORT 3000..."))

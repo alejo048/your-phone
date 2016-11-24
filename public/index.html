@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Compare</title>
+	<!-- my Styles-->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- fonts GOOGLE!!!-->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,400i,600,600i,700" rel="stylesheet">
@@ -24,8 +25,8 @@
 					<li><a href="#/fav">Favs</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right SandS">
-					<li>
-						<form action="/search" method="POST" class="form-group search"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+					<li ng-controller="controllerSearch">
+						<form ng-submit="goSearch()" class="form-group search"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
 							<input autofocus ng-model="search" name="phone" type="text" placeholder="Search..." class="searchName">
 						</form>
 					</li>
@@ -52,8 +53,8 @@
 
 	<div class="footer"></div>
 
-	<script
-	src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 	<script src="js/app.js"></script>

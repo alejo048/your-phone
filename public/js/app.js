@@ -16,7 +16,7 @@ angular.module('myApp',['ngRoute'])
 		})
 		.when('/search', {
 			templateUrl: 'view/search.html',
-			controller: 'controllerSearch'
+			controller: 'controllerViewSearch'
 		})
 		.when('/add', {
 			templateUrl: 'view/add.html',

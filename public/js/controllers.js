@@ -31,48 +31,32 @@ angular.module("myApp")
 	})
 })
 
+.controller('controllerSearch', function($scope,$rootScope,phoneService, $location,$route){
+	
+	$scope.goSearch =function(){
+		phoneService.getDevices($scope.search)
+			.then(function(response){
+
+				$rootScope.phonesResults=response.data;
+				console.log($scope.phonesResults)
+				$location.path('/search')
+				$route.reload()
+			})
+	}
+})
+.controller('controllerViewSearch', function($rootScope,$scope,phoneService){
+	$scope.phones = $rootScope.phonesResults;
+
+})
+
+
+
+/*.controller('controllerAdd', function($scope,phoneService){
+
+})
 .controller('controllerCompare', function($scope,phoneService){
 
 })
 .controller('controllerFav', function($scope,phoneService){
 
-})
-.controller('controllerSearch', function($scope,phoneService){
-
-})
-.controller('controllerAdd', function($scope,phoneService){
-
-	/*$scope.createObject = function(){
-		$scope.myObject = {};
-
-		$scope.myobject.deviceName = $scope.deviceName;
-		$scope.myobject.brand = $scope.brand;
-		$scope.myobject.img = $scope.img;
-		$scope.myobject.dimensions = $scope.dimensions;
-		$scope.myobject.size = $scope.size;
-		$scope.myobject.sim = $scope.sim;
-		$scope.myobject.scrrenType = $scope.scrrenType;
-		$scope.myobject.resolution = $scope.resolution;
-		$scope.myobject.card_slot = $scope.card_slot;
-		$scope.myobject.wlan = $scope.wlan;
-		$scope.myobject.blutooth = $scope.blutooth;
-		$scope.myobject.gps = $scope.gps;
-		$scope.myobject.radio = $scope.radio;
-		$scope.myobject.usb = $scope.usb;
-		$scope.myobject.batery = $scope.batery;
-		$scope.myobject.colors= $scope.colors
-		$scope.myobject.sensors = $scope.sensors;
-		$scope.myobject.memory = $scope.memory;
-		$scope.myobject.os = $scope.os;
-		$scope.myobject.cam = $scope.cam;
-		$scope.myobject.c_secondary = $scope.c_secondary;
-		$scope.myobject.c_primary = $scope.c_primary;
-		$scope.myobject.video = $scope.video;
-		$scope.myobject.chipset = $scope.chipset;
-		$scope.myobject.conections = $scope.conections;
-
-		console.log($scope.myObject)
-	}*/
-
-
-})
+})*/

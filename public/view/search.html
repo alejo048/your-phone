@@ -1,6 +1,10 @@
-<div class="item">
-	<img src="" alt="" style="height: 70%">
-	<h4 class="name"></h4>
-	<button class="compare">Compare</button>	
-	<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
-</div>
+<div class="content">
+
+		<div class="item" ng-repeat="phone in phones">
+			<img src="" alt="" style="height: 70%">
+			<h4 class="name">{{phone.DeviceName}}</h4>
+			<button class="compare">Compare</button>	
+			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
+		</div>
+
+	</div>

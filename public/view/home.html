@@ -35,8 +35,9 @@
 		<div class="item" ng-repeat="phone in phones | filter:brandFilter " data-id="phone.id">
 			<img src="" alt="" style="height: 70%">
 			<h4 class="name">{{phone.DeviceName}}</h4>
-			<button class="compare">Compare</button>	
+			<button id="myBtn" class="compare">Compare</button>	
 			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
 		</div>
-
+		
 	</div>
+
