@@ -11,12 +11,16 @@
     "fonoapi-nodejs": "^0.1.1",
     "mongodb": "^2.2.11",
     "mongoose": "^4.7.0",
+    "mongoose-paginate": "^5.0.3",
     "pug": "^2.0.0-beta6",
     "underscore": "^1.8.3"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node app"
+  },
+  "engines": {
+    "node": "6.6.0"
   },
   "keywords": [],
   "author": "",
