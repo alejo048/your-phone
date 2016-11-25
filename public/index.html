@@ -13,11 +13,11 @@
 	<link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav ng-controller="controllerNav" class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" data-toggle="collapse" data-target="#nav" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button>
-			</div><a href="#/" class="navbar-brand">LOGO</a>
+			</div><a href="#/" class="navbar-brand">@A.P</a>
 			<div id="nav" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-left">
 					<li><a href="#/">Home</a></li>
@@ -25,7 +25,7 @@
 					<li><a href="#/fav">Favs</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right SandS">
-					<li ng-controller="controllerSearch">
+					<li >
 						<form ng-submit="goSearch()" class="form-group search"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
 							<input autofocus ng-model="search" name="phone" type="text" placeholder="Search..." class="searchName">
 						</form>
@@ -38,10 +38,6 @@
 		</div>
 	</nav>
 	<div class="main">
-		
-		<div class="aside">
-			
-		</div>
 
 		<div>
 			
@@ -57,8 +53,18 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
 	<script src="js/app.js"></script>
-	<script src="js/services.js"></script>
-	<script src="js/controllers.js"></script>
+	<script src="js/directives/index.js"></script>
+
+	<script src="js/services/index.js"></script>
+	<script src="js/services/services.js"></script>
+	<script src="js/services/ImagesService.js"></script>
+	
+	<script src="js/controllers/index.js"></script>
+	<script src="js/controllers/navCtl.js"></script>
+	<script src="js/controllers/compareCtl.js"></script>
+	<script src="js/controllers/homeCtl.js"></script>
+	<script src="js/controllers/add.js"></script>
 </body>
 </html>

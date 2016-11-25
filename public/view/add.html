@@ -1,23 +1,30 @@
 <div class="container">
 	
-	<form class="myform" ng-submit="createObject()" action="/add" method="POST" role="form">
+	<form class="myform" action="/add" method="POST" role="form">
 		<legend>Agrega</legend>
 
-		<div class="form-group col-md-6">
+		
+		<div class="form-group">
+			<div class="col-md-10 containerImg">
+			<label for="exampleInputFile" class="col-md-2 control-label">IMG</label>
+				<img id="preview-image" >
+				<input class="btn btn-default" type="file" custom-on-change="uploadImage"/>
+				<input hidden name="file" ng-value="getImage()"/>
+				<style id="styles-preview-image"></style>
+				<p>{{getImage()}}</p>
+			</div>
+		</div>
+
+		<div id="form" class="form-group col-md-6">
 			<label for="">Nombre</label>
 			<input required name="deviceName" class="form-control" id="" placeholder="iphone 7....">
 		</div>
 
-		<div class="form-group col-md-6">
+		<div id="form" class="form-group col-md-6">
 			<label for="">Marca</label>
 			<input required type="text" name="brand" class="form-control" id="" placeholder="Apple...">
 		</div>
 
-		<div class="form-group col-md-6">
-			<label for="">imagen</label>
-			<input class="btn btn-primary" required type="url" name="img" class="form-control">
-			<!-- <input class="btn btn-primary" required type="file" name="img" class="form-control" accept="image/*"> -->
-		</div>
 
 		<div class="form-group col-md-6">
 			<label for="">Dimenciones</label>
@@ -101,7 +108,7 @@
 
 		<div class="form-group col-md-6">
 			<label for="">Camara</label>
-			<input required type="text" name="cam" class="form-control" id="" placeholder="obertura de camara, zoom y esas mierdas wey">
+			<input required type="text" name="cam" class="form-control" id="" placeholder="obertura de camara, zoom..">
 		</div>
 
 		<div class="form-group col-md-6">
@@ -126,14 +133,14 @@
 
 		<div class="form-group col-md-6">
 			<label for="">Conecciones</label>
-			<input required type="text" name="conections" class="form-control" id="" placeholder="tipo de conecciones 3g 4g hdp..y esas pinches mamadas">
+			<input required type="text" name="conections" class="form-control" id="" placeholder="tipo de conecciones 3g 4g ">
 		</div>
 
 
+		<button type="submit" style="width: 16%; margin-left:40%;" class="btn btn-primary">Submit</button>
 
 		
 
-		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 
 </div>

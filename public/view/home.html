@@ -1,3 +1,13 @@
+	<div class="aside">
+		<div ng-repeat="phone in compareList">
+			<div class="phone">
+				<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>{{phone.deviceName}}</p>
+			</div>
+		</div>
+
+		<a class="btn-compare btn btn-primary" href="#/compare" ng-show="button">Compare</a>
+
+	</div>
 	<div class="filter">
 		<h4>Brands</h4>
 		<ul>
@@ -20,24 +30,25 @@
 				<input type="checkbox" ng-click='includeBrand("Asus")'> Asus
 			</li>
 			<li>
+				<input type="checkbox" ng-click='includeBrand("Acer")'> Acer
+			</li>
+			<li>
 				<input type="checkbox" ng-click='includeBrand("LG")'> LG
 			</li>
 			<li>
 				<input type="checkbox" ng-click='includeBrand("Sony")'> Sony
 			</li>
 		</ul>
-
-		<p> brands includes {{brandsIncludes}}</p>
 	</div>
 
 	<div class="content">
 
-		<div class="item" ng-repeat="phone in phones | filter:brandFilter " data-id="phone.id">
+		<div class="item" ng-repeat="phone in phones | filter:brandFilter | orderBy: 'deviceName' " >
 			<img src="" alt="" style="height: 70%">
-			<h4 class="name">{{phone.DeviceName}}</h4>
-			<button id="myBtn" class="compare">Compare</button>	
+			<h4 class="name">{{phone.deviceName}}</h4>
+			<button id="myBtn" class="compare" ng-click="compare(phone)">Compare</button>	
 			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
 		</div>
-		
 	</div>
+
 

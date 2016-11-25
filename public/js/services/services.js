@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('myServices')
 	.factory('phoneService', function($http) {
 
 			function getLasted() {

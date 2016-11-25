@@ -1,9 +1,21 @@
-<div class="content">
+	<div class="aside">
+		<div ng-repeat="phone in compareList">
+			<div class="phone">
+				<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>{{phone.DeviceName}}</p>
+			</div>
+		</div>
+
+		<a class="btn-compare btn btn-primary" href="#/compare" ng-show="button">Compare</a>
+
+	</div>
+
+
+	<div class="content">
 
 		<div class="item" ng-repeat="phone in phones">
 			<img src="" alt="" style="height: 70%">
 			<h4 class="name">{{phone.DeviceName}}</h4>
-			<button class="compare">Compare</button>	
+			<button class="compare" ng-click="compare(phone)">Compare</button>	
 			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
 		</div>
 
