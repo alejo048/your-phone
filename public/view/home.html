@@ -44,7 +44,7 @@
 	<div class="content">
 
 		<div class="item" ng-repeat="phone in phones | filter:brandFilter | orderBy: 'deviceName' " >
-			<img src="" alt="" style="height: 70%">
+			<img src="" alt="" style="width: 100%">
 			<h4 class="name">{{phone.deviceName}}</h4>
 			<button id="myBtn" class="compare" ng-click="compare(phone)">Compare</button>	
 			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>

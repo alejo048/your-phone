@@ -9,7 +9,7 @@
 			<label for="exampleInputFile" class="col-md-2 control-label">IMG</label>
 				<img id="preview-image" >
 				<input class="btn btn-default" type="file" custom-on-change="uploadImage"/>
-				<input hidden name="file" ng-value="getImage()"/>
+				<input hidden name="img" value="{{href}}" />
 				<style id="styles-preview-image"></style>
 				<p>{{getImage()}}</p>
 			</div>

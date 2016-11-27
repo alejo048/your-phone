@@ -10,6 +10,8 @@ angular.module('myControllers')
 			ImagesService.getRemoteUrlImage( file )
 			.then( remoteUrl => {
 				angular.element(oStylesImage).html(`#preview-image{background-image:url("${remoteUrl}")}`);
+				$scope.href=remoteUrl;
+				console.log($scope.href)
 			})
 
 		};
