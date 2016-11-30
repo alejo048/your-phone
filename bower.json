@@ -1,0 +1,19 @@
+{
+  "name": "your-phone",
+  "description": "phone comparator",
+  "main": "app.js",
+  "authors": [
+    "Alejandro Pavon <misael04@outlook.es>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "ng-dialog": "^0.6.4",
+    "angular" : "^1.5.9"
+  }
+}

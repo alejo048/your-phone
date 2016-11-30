@@ -1,4 +1,4 @@
-	<div class="aside">
+	<div class="aside" ng-show="button">
 		<div ng-repeat="phone in compareList">
 			<div class="phone">
 				<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>{{phone.deviceName}}</p>
@@ -9,46 +9,48 @@
 
 	</div>
 	<div class="filter">
-		<h4>Brands</h4>
-		<ul>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Apple")'> Apple
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Google")'> Google
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Samsung")'> Samsung
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Nokia")'> Nokia
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Huawei")'> Huawei
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Asus")'> Asus
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Acer")'> Acer
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("LG")'> LG
-			</li>
-			<li>
-				<input type="checkbox" ng-click='includeBrand("Sony")'> Sony
-			</li>
-		</ul>
+		<div class="filterCheckbox">
+			<h4>Brands</h4>
+			<ul>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Apple")'> Apple
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Google")'> Google
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Samsung")'> Samsung
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Nokia")'> Nokia
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Huawei")'> Huawei
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Asus")'> Asus
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Acer")'> Acer
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("LG")'> LG
+				</li>
+				<li>
+					<input type="checkbox" ng-click='includeBrand("Sony")'> Sony
+				</li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="content">
 
 		<div class="item" ng-repeat="phone in phones | filter:brandFilter | orderBy: 'deviceName' " >
 			<img src="{{phone.img}}" alt="" style="width: 100%; height: 70%">
-			<h4 class="name">{{phone.deviceName}}</h4>
-			<button id="myBtn" class="compare" ng-click="compare(phone)">Compare</button>	
-			<span class="fav glyphicon glyphicon-star-empty" aria-hidden='true'></span>
+			<h4 class="name" ng-click="clickToOpen(phone)">{{phone.deviceName}}</h4>
+			<button id="myBtn" class="compare" ng-click="compare(phone)">Compare</button>
 		</div>
 	</div>
+
 
 

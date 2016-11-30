@@ -1,4 +1,4 @@
-angular.module('myApp',['ngRoute','myDirectives','myControllers'])
+angular.module('myApp',['ngRoute','myDirectives','myControllers','ngStorage','ngDialog'])
 	.config( function($routeProvider) {
 
 		$routeProvider
@@ -21,6 +21,14 @@ angular.module('myApp',['ngRoute','myDirectives','myControllers'])
 		.when('/add', {
 			templateUrl: 'view/add.html',
 			controller: 'controllerAdd'
+		})
+		.when('/signup', {
+			templateUrl: 'view/signup.html',
+			controller: 'controllerSign'
+		})
+		.when('/login', {
+			templateUrl: 'view/login.html',
+			controller: 'controllerLog'
 		})
 		.otherwise({redirectTo: '/'});
 

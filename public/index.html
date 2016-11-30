@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1/2, maximum-scale=1">
 	<meta charset="UTF-8">
 	<title>Compare</title>
+	<!-- modal estyles ng-dialog -->
+	<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.min.css">
+	<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css">
 	<!-- my Styles-->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- fonts GOOGLE!!!-->
@@ -12,9 +15,10 @@
 	<!-- Latest compiled and minified CSS & JS-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+
 </head>
 <body>
-	<nav ng-controller="controllerNav" class="navbar navbar-default">
+	<nav ng-controller="controllerNav" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" data-toggle="collapse" data-target="#nav" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button>
@@ -52,8 +56,12 @@
 
 	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+	<!-- modal script ng-dialog -->
+	<script src="bower_components/ng-dialog/js/ngDialog.min.js" ></script>
 
 	<script src="js/app.js"></script>
 	<script src="js/directives/index.js"></script>
@@ -61,11 +69,14 @@
 	<script src="js/services/index.js"></script>
 	<script src="js/services/services.js"></script>
 	<script src="js/services/ImagesService.js"></script>
+	<script src="js/services/authService.js"></script>
 	
 	<script src="js/controllers/index.js"></script>
 	<script src="js/controllers/navCtl.js"></script>
 	<script src="js/controllers/compareCtl.js"></script>
 	<script src="js/controllers/homeCtl.js"></script>
 	<script src="js/controllers/add.js"></script>
+	<script src="js/controllers/logCtl.js"></script>
+	<script src="js/controllers/signCtl.js"></script>
 </body>
 </html>

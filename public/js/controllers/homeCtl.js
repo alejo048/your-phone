@@ -1,5 +1,5 @@
 angular.module('myControllers')
-.controller('controllerHome', function($scope,phoneService,$rootScope){
+.controller('controllerHome', function($scope,phoneService,$rootScope,ngDialog){
 	phoneService.getLasted()
 	.then(function(response){
 		console.log(response.data)
@@ -28,14 +28,21 @@ angular.module('myControllers')
 		}
 
 	})
+	$scope.clickToOpen = function (phone) {
+		ngDialog.open({ template: '<img src="'+ phone.img +'" alt="" style="margin-left:25% ; width: 50%; height: 250px"><h3 style= "text-align: center;">'+phone.deviceName+'</h3>' , plain: true});
+	};
 
 	$rootScope.compareList = []
-	
 	$rootScope.compare = function(phone){
-
-		$rootScope.button=true;
-
 		$rootScope.compareList.push(phone)
+
+		if($rootScope.compareList.length !==0){
+			$scope.button=true;
+		}else{
+			$scope.button=false;
+		}
+		
+
 	}
 
 })
