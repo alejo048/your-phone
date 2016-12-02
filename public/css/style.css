@@ -33,6 +33,20 @@
 	#logo{
 		width: 280px;
 	}
+	a.logo{
+		margin: 0px;
+		padding: 0px;
+	}
+	.logoNav{
+		width: 90px;
+	}
+	.logoText{
+		margin-top: 6%;
+		width: 30%;
+		margin-right: 5%;
+		float: right;
+	}
+
 
 
 	/*stilos de la pagina HOME*/
