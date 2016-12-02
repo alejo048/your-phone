@@ -18,30 +18,26 @@
 
 </head>
 <body>
-	<nav ng-controller="controllerNav" class="navbar navbar-default navbar-fixed-top">
+	<nav id="nav" ng-controller="controllerNav" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" data-toggle="collapse" data-target="#nav" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button>
-			</div><a href="#/" class="navbar-brand">@A.P</a>
-			<div id="nav" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-left">
+			<a href="#/" class="navbar-brand logo"><img src="../img/logo_blue.png" class="logoNav" alt=""></a>
+			<div id="nav" >
+				<form ng-submit="goSearch()" class="form-group search">
+					<input autofocus ng-model="search" name="phone" type="text" placeholder="Search..." class="searchName">
+				</form>
+				
+				<ul id="navul" class="nav navbar-nav">
 					<li><a href="#/">Home</a></li>
 					<li><a href="#/compare">Compare</a></li>
-					<li><a href="#/fav">Favs</a></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right SandS">
-					<li >
-						<form ng-submit="goSearch()" class="form-group search"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
-							<input autofocus ng-model="search" name="phone" type="text" placeholder="Search..." class="searchName">
-						</form>
-					</li>
-					<li>
-						<button class="login"> <span aria-hidden="true" class="glyphicon glyphicon-off"></span></button>
-					</li>
-				</ul>
+				
 			</div>
 		</div>
 	</nav>
+	<header>
+	<img id="logo" src="../img/logo_white.png" alt="">
+	<img class="logoText" src="../img/logoText.png" alt="">
+	</header>
 	<div class="main">
 
 		<div>
@@ -78,5 +74,6 @@
 	<script src="js/controllers/add.js"></script>
 	<script src="js/controllers/logCtl.js"></script>
 	<script src="js/controllers/signCtl.js"></script>
+	<script src="js/controllers/adminCtl.js"></script>
 </body>
 </html>

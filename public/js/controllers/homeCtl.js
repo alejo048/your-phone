@@ -1,5 +1,5 @@
 angular.module('myControllers')
-.controller('controllerHome', function($scope,phoneService,$rootScope,ngDialog){
+.controller('controllerHome', function($scope,phoneService,$rootScope,ngDialog,$location){
 	phoneService.getLasted()
 	.then(function(response){
 		console.log(response.data)
@@ -43,6 +43,11 @@ angular.module('myControllers')
 		}
 		
 
+	}
+	$scope.more = function (phone){
+		$rootScope.morePhone = phone;
+		console.log($rootScope.morePhone)
+		$location.path('/admin')
 	}
 
 })

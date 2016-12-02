@@ -30,6 +30,10 @@ angular.module('myApp',['ngRoute','myDirectives','myControllers','ngStorage','ng
 			templateUrl: 'view/login.html',
 			controller: 'controllerLog'
 		})
+		.when('/admin', {
+			templateUrl: 'view/admin.html',
+			controller: 'adminCtl'
+		})
 		.otherwise({redirectTo: '/'});
 
 	})

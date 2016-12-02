@@ -1,0 +1,131 @@
+<div class="container">
+	<form>
+
+		<div id="form" class="form-group col-md-4">
+			<label for="">Nombre</label>
+			<input required ng-model="deviceName" ng-value="phones.deviceName" class="form-control" id="" placeholder="iphone 7....">
+		</div>
+
+		<div id="form" class="form-group col-md-4">
+			<label for="">Marca</label>
+			<input required type="text" ng-model="brand" ng-value='phones.brand' class="form-control" id="" placeholder="Apple...">
+		</div>
+
+
+		<div id="form" class="form-group col-md-4">
+			<label for="">Dimenciones</label>
+			<input required type="text" ng-model="dimensions" ng-value="phones.dimensions" class="form-control" id="" placeholder="7x5x2...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Tamaño(pulgadas)</label>
+			<input required type="text" ng-model="size" ng-value="phones.size" class="form-control" id="" placeholder="5.5''..">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Sim</label>
+			<input required type="text" ng-model="sim" ng-value="phones.sim" class="form-control" id="" placeholder="nano micro...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">tipo de pantalla</label>
+			<input required type="text" ng-model="screenType" ng-value="phones.screenType" class="form-control" id="" placeholder="lecd..">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">resolucion</label>
+			<input required type="text" ng-model="resolution" ng-value="phones.resolution" class="form-control" id="" placeholder="1080x720....">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Lector de targetas</label>
+			<input required type="text" ng-model="card_slot" ng-value="phones.card_slot" class="form-control" id="" placeholder="no/si">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Wlan</label>
+			<input required type="text" ng-model="wlan" ng-value="phones.wlan" class="form-control" id="" placeholder="wifi 1.8..">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Bluetooth</label>
+			<input required type="text" ng-model="bluetooth" ng-value="phones.bluetooth" class="form-control" id="" placeholder="2.565464....">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">gps</label>
+			<input required type="text" ng-model="gps" ng-value="phones.gps" class="form-control" id="" placeholder="si gps, agps...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">radio</label>
+			<input required type="text" ng-model="radio" ng-value="phones.radio" class="form-control" id="" placeholder="si/no">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">usb</label>
+			<input required type="text" ng-model="usb" ng-value="phones.usb" class="form-control" id="" placeholder="tipo de conector...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Bateria</label>
+			<input required type="text" ng-model="batery" ng-value="phones.batery" class="form-control" id="" placeholder="litio no renobable 1300h...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">colores</label>
+			<input required type="text" ng-model="colors" ng-value="phones.colors" class="form-control" id="" placeholder="negro gris rojo..">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">sensores</label>
+			<input required type="text" ng-model="sensors" ng-value="phones.sensors" class="form-control" id="" placeholder="de proximidad de huellas...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Memoria (interna y Ram)</label>
+			<input required type="text" ng-model="memory" ng-value="phones.memory" class="form-control" id="" placeholder="32/64/120GB , 4Gb RAM">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Sistema Operativo</label>
+			<input required type="text" ng-model="os" ng-value="phones.os" class="form-control" id="" placeholder="IOS 10">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Camara</label>
+			<input required type="text" ng-model="cam" ng-value="phones.cam" class="form-control" id="" placeholder="obertura de camara, zoom..">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Camara (trasera/primaria)</label>
+			<input required type="text" ng-model="c_primary" ng-value="phones.c_primary" class="form-control" id="" placeholder="12mpx">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Camara (frontal)</label>
+			<input required type="text" ng-model="c_secondary" ng-value="phones.c_secondary" class="form-control" id="" placeholder="8Mpx">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Video</label>
+			<input required type="text" ng-model="video" ng-value="phones.video" class="form-control" id="" placeholder="480p@24fps ....">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">procesador (chip)</label>
+			<input required type="text" ng-model="chipset" ng-value="phones.chipset" class="form-control" id="" placeholder="Qualcom intel o el de apple A10...">
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="">Conecciones</label>
+			<input required type="text" ng-model="conections" ng-value="phones.conections" class="form-control" id="" placeholder="tipo de conecciones 3g 4g ">
+		</div>
+		
+		<div class="form-group row">
+			<button ng-click="updateInfo()" class="btn btn-warning col-sm-2 col-sm-offset-3">Update</button>
+			<button ng-click="deleteInfo()" class="btn btn-danger col-sm-2 col-sm-offset-2">Delete</button>
+		</div>
+	</form>
+
+</div>

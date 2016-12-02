@@ -1,3 +1,4 @@
+	
 	<div class="aside" ng-show="button">
 		<div ng-repeat="phone in compareList">
 			<div class="phone">
@@ -49,6 +50,7 @@
 			<img src="{{phone.img}}" alt="" style="width: 100%; height: 70%">
 			<h4 class="name" ng-click="clickToOpen(phone)">{{phone.deviceName}}</h4>
 			<button id="myBtn" class="compare" ng-click="compare(phone)">Compare</button>
+			<button id="myBtn" class="compare more" ng-click="more(phone)">More...</button>
 		</div>
 	</div>
 

@@ -18,7 +18,6 @@ const PORT = process.env.PORT || 3000;
 //require de los routes 
 const routerPhones = require('./routes/phones');
 const routerS3 = require('./routes/s3');
-const routerAuth = require('./routes/auth');
 
 
 // envio de los archivos estaticos de la carpeta public
@@ -31,7 +30,6 @@ app.use(bodyparser.json());
 
 app.use( routerPhones )
 app.use( routerS3 )
-app.use ( routerAuth )
 
 
 

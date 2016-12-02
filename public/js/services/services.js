@@ -9,9 +9,18 @@ angular.module('myServices')
 				return $http.get("/search?name="+name);
 			}
 
+			function updateDevice(id,data){
+				return $http.put('/update/'+id,data)
+			}
+			function deleteDevice(id){
+				return $http.delete('/delete/'+id)
+			}
+
 
 			return {
 				getLasted: getLasted,
-				getDevices: getDevices
+				getDevices: getDevices,
+				updateDevice: updateDevice,
+				deleteDevice: deleteDevice
 			}
 	})
